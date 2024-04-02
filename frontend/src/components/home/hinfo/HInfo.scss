@@ -1,0 +1,75 @@
+@import '../../../styles.scss';
+
+.info{
+    &-content{
+        padding: 50px 0;
+    }
+    &-items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+        @include breakpoint(tab-port){
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    &-item{
+        text-align: center;
+        padding: 60px 40px;
+        box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.17);
+        @include breakpoint(tab-port){
+            padding: 15px;
+        }
+        &:hover{
+            &  .info-item__hr::before{
+                left: 50%;
+                right: 50%;
+                transition-duration: .2s;
+            }
+            & .info-item__hr::after {
+                left: 0;
+                right: 0;
+            }
+        }
+        &__hr{
+            position: relative;
+            max-width: 126px;
+            width: 100px;
+            height: 2px;
+            margin: 20px auto 22px;
+            &::before{
+                position: absolute;
+                content: '';
+                height: 100%;
+                left: 15px;
+                right: 15px;
+                background: #d7d7d7;
+                transition: all .3s ease;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                height: 100%;
+                left: 50%;
+                right: 50%;
+                background: #ffdb73;
+                transition: all .3s ease;
+            }
+        }
+        &__icon{
+            height: 47px;
+            & svg{
+                color: #ffdb73;
+            }
+        }
+        &__title{
+            font-size: 22px;
+            line-height: 1;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+        &__text{
+            margin: 0 10px;
+            font-family: "Poppins", sans-serif;
+        }
+    }
+}

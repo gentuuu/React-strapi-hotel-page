@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oferty",
+  "info": {
+    "singularName": "oferta",
+    "pluralName": "oferty",
+    "displayName": "Oferta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "richtext"
+    },
+    "Icon": {
+      "type": "customField",
+      "customField": "plugin::react-icons.icon"
+    }
+  }
+}

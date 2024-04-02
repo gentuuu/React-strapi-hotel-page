@@ -1,0 +1,46 @@
+@import '../../../styles.scss';
+
+.opinion{
+    background: #f7f7f7;
+    &-content{
+        padding: 50px 0;
+    }
+    &-title{
+        font-family: "Teko", sans-serif;
+        font-size: 48px;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: #151515;
+        text-align: center;
+    }
+    &-items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+        margin-top: 35px;
+        @include breakpoint(tab-port){
+            grid-template-columns: repeat(1,1fr);
+        }   
+    }
+    &-item{
+        padding: 40px 20px;
+        text-align: center;
+        letter-spacing: .025em;
+        background: #ffffff;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.15));
+        &__text{
+          
+        }
+        &__name{
+            color: #ffdb73;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: "Teko", sans-serif;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            margin-top: 25px;
+        }
+    }
+}

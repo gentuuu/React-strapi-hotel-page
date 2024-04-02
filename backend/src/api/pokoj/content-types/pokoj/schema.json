@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pokoje",
+  "info": {
+    "singularName": "pokoj",
+    "pluralName": "pokoje",
+    "displayName": "Pokoje",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Dsc": {
+      "type": "text"
+    },
+    "Text": {
+      "type": "richtext"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Price": {
+      "type": "string"
+    },
+    "Gallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
